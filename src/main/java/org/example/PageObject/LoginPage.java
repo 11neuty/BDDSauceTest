@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
    public static WebDriver webDriver;
+   public boolean verifyLoginPage;
 
    public LoginPage(WebDriver driver){
        PageFactory.initElements(driver, this);
@@ -25,12 +26,13 @@ public class LoginPage {
    private WebElement labelProduct;
 
 
+
     // SETUP METHOD
-   public void inputFieldUserName(String usarName){
-      fieldUserName.sendKeys("standard_user");
+   public void inputFieldUserName(String userName){
+      fieldUserName.sendKeys(userName);
    }
    public void inputFieldPassword(String password){
-      fieldPassword.sendKeys("secret_sauce");
+      fieldPassword.sendKeys(password);
    }
    public void clickButtonLogin(){
        buttonLogin.click();

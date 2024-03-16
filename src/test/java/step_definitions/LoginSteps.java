@@ -16,7 +16,7 @@ public class LoginSteps {
 
     @Given("User open the web sauce demo")
     public void userOpenTheWebSauceDemo(){
-        Assert.assertTrue(LoginPage.verifyLoginPage());
+        Assert.assertTrue(loginPage.verifyLoginPage());
     }
 
     @When("User input {string} as userName and {string} as password and click login")
@@ -28,6 +28,6 @@ public class LoginSteps {
 
     @Then("User already on dashboard page")
     public void userAlreadyOnDashboardPage() {
-
+    Assert.assertTrue(loginPage.verifyLabelProduct());
     }
 }
