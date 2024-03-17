@@ -25,6 +25,8 @@ public class InventoryPage {
     private WebElement CartPage;
 
 
+
+
     //SETUP METHOD
     public void setSortProduct(String SortByText){
         Select select = new Select(sortProduct);

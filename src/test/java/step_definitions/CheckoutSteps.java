@@ -20,9 +20,8 @@ public class CheckoutSteps {
 
 
 
-    @When("User remove item from shopping chart")
-    public void userRemoveItem() {
-        checkoutPage.ClickRemoveItem();
+    @When("User remove item {string} from shopping chart")
+    public void userRemoveItemFromShoppingChart(String item) {
     }
 
     @And("User click checkout button")
@@ -31,7 +30,7 @@ public class CheckoutSteps {
     }
 
     @Then("User fill first name as {string}, last name as {string}, and postal code as {string}")
-    public void userFillFirstNameAsLastNameAsAndPostalCodeAs(String awal, String akhir, Integer kode) {
+    public void userFillFirstNameAsLastNameAsAndPostalCodeAs(String awal, String akhir, String kode) {
     checkoutPage.fillFirstName(awal);
     checkoutPage.fillLastName(akhir);
     checkoutPage.fillPostalCode(kode);
@@ -43,4 +42,19 @@ public class CheckoutSteps {
     }
 
 
+    @Then("User redirect to Checkout Overview and see total payment")
+    public void userRedirectToCheckoutOverviewAndSeeTotalPayment() {
+        checkoutPage.verifyPageOverview();
+    }
+
+    @When("User Click Finish")
+    public void userClickFinish() {
+        checkoutPage.ClickButtonFinish();
+
+    }
+
+    @Then("User redirect to Checkout complete page")
+    public void userRedirectToCheckoutCompletePage() {
+        checkoutPage.CheckoutcompletePage();
+    }
 }

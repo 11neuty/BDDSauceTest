@@ -24,6 +24,7 @@ public class InventorySteps {
     @And("User add to cart button for {string}")
     public void userAddToCartItemFor(String item) {
         inventoryPage.ClickAddToCartItem(item);
+        inventoryPage.ClickAddToCartItem(item);
     }
 
     @And("User click on shopping cart badge")
