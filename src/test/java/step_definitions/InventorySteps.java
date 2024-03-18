@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.example.PageObject.CheckoutPage;
 import org.example.PageObject.InventoryPage;
 import org.example.PageObject.LoginPage;
 import org.junit.Assert;
@@ -21,7 +22,7 @@ public class InventorySteps {
     inventoryPage.setSortProduct(SortByText);
     }
 
-    @And("User add to cart button for {string}")
+    @And("User click add to cart button for {string}")
     public void userAddToCartItemFor(String item) {
         inventoryPage.ClickAddToCartItem(item);
         inventoryPage.ClickAddToCartItem(item);
