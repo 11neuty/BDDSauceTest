@@ -19,10 +19,10 @@ public class InventoryPage {
         private WebElement sortProduct;
 
     @FindBy(xpath = "//div[@id='shopping_cart_container']/a[1]")
-        private WebElement ShoppingCartBadge;
+        private WebElement shoppingCartBadge;
 
     @FindBy(xpath = "//span[@class='title']")
-    private WebElement CartPage;
+    private WebElement cartPage;
 
 
 
@@ -32,16 +32,16 @@ public class InventoryPage {
         Select select = new Select(sortProduct);
         select.selectByVisibleText(SortByText);
     }
-    public void ClickAddToCartItem(String item){
+    public void clickAddToCartItem(String item){
     String button = "//div[text()='"+ item +"']//ancestor::div[@id='inventory_container']//button[text()='Add to cart']";
     webDriver.findElement(By.xpath(button)).click();
     }
 
-    public void ClickShoppingCartBadge(){
-        ShoppingCartBadge.click();
+    public void clickShoppingCartBadge(){
+        shoppingCartBadge.click();
     }
 
     public boolean verifyCartPage(){
-        return CartPage.isDisplayed();
+        return cartPage.isDisplayed();
     }
 }

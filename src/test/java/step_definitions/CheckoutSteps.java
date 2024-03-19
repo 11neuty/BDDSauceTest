@@ -42,9 +42,9 @@ public class CheckoutSteps {
     }
 
 
-    @Then("User redirect to Checkout Overview and see total payment")
-    public void userRedirectToCheckoutOverviewAndSeeTotalPayment() {
-        checkoutPage.verifyPageOverview();
+    @Then("User see {string} as page overview")
+    public void userRedirectToCheckoutOverviewAndSeeTotalPayment(String text) {
+        Assert.assertEquals(text, checkoutPage.getPageOverview());
     }
 
     @When("User Click Finish")
@@ -56,5 +56,15 @@ public class CheckoutSteps {
     @Then("User redirect to Checkout complete page")
     public void userRedirectToCheckoutCompletePage() {
         checkoutPage.CheckoutcompletePage();
+    }
+
+    @Then("User redirect to Your Cart page")
+    public void userRedirectToYourCartPage() {
+        checkoutPage.verifyYourCartPage();
+    }
+
+    @Then("User redirect to Your Information page")
+    public void userRedirectToYourInformationPage() {
+        checkoutPage.verifyYourInformationPage();
     }
 }

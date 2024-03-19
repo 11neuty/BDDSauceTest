@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="476e48cf-0b4d-4624-aacd-0c054f7718cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/step_definitions/InventorySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/step_definitions/InventorySteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/AddToCart.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Checkout.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Login.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PageObject/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PageObject/CheckoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/step_definitions/CheckoutSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/step_definitions/CheckoutSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/purchase.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/purchase.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

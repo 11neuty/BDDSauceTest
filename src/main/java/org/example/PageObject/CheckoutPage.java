@@ -1,5 +1,6 @@
 package org.example.PageObject;
 
+import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,28 +16,34 @@ public class CheckoutPage {
     }
 //LOCATOR
 @FindBy(xpath = "//button[@id='checkout']")
-private WebElement CheckoutButton;
+private WebElement checkoutButton;
 
 @FindBy(xpath = "//input[@id='first-name']")
-private WebElement fieldfirstName;
+private WebElement fieldFirstName;
 
 @FindBy(xpath = "//input[@id='last-name']")
-private WebElement fieldlastName;
+private WebElement fieldLastName;
 
 @FindBy(xpath = "//input[@id='postal-code']")
-private WebElement fieldpostalCode;
+private WebElement fieldPostalCode;
 
 @FindBy(xpath = "//input[@id='continue']" )
-private WebElement ContinueButton;
+private WebElement continueButton;
 
-@FindBy(xpath = "//span[@class='title']")
-private WebElement CheckoutoverviewSpan;
+@FindBy(xpath = "//div[text()='Payment Information']")
+private WebElement checkoutOverviewSpan;
 
 @FindBy(xpath = "//button[@id='finish']")
-private WebElement ButtonFinish;
+private WebElement buttonFinish;
 
 @FindBy(xpath = "//span[@class='title']")
-private WebElement ThankyouSpan;
+private WebElement thankYouSpan;
+
+@FindBy(xpath = "//span[@class='title']")
+private WebElement yourCartPage;
+
+@FindBy(xpath = "//span[@class='title']")
+private WebElement yourInformationPage;
 
 
     //SETUP METHOD
@@ -45,30 +52,39 @@ private WebElement ThankyouSpan;
      webDriver.findElement(By.xpath(button)).click();
     }
  public void clickCheckoutButton(){
-     CheckoutButton.click();
+     checkoutButton.click();
  }
  public void fillFirstName(String awal){
-     fieldfirstName.sendKeys(awal);
+     fieldFirstName.sendKeys(awal);
  }
  public void fillLastName(String akhir){
-     fieldlastName.sendKeys(akhir);
+     fieldLastName.sendKeys(akhir);
  }
  public void fillPostalCode(String  kode){
-     fieldpostalCode.sendKeys(kode);
+     fieldPostalCode.sendKeys(kode);
  }
 
  public  void ClickContinueButton(){
-     ContinueButton.click();
+     continueButton.click();
  }
 
- public void verifyPageOverview(){
-     CheckoutoverviewSpan.isDisplayed();
+ public String getPageOverview(){
+     return checkoutOverviewSpan.getText();
+
  }
  public void ClickButtonFinish(){
-     ButtonFinish.click();
+     buttonFinish.click();
  }
 
-    public void CheckoutcompletePage(){
-     ThankyouSpan.click();
+ public void CheckoutcompletePage(){
+     thankYouSpan.click();
     }
+
+ public void verifyYourCartPage(){
+     yourCartPage.isDisplayed();
+ }
+
+ public void verifyYourInformationPage(){
+     yourInformationPage.isDisplayed();
+ }
 }

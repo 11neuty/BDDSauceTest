@@ -24,13 +24,13 @@ public class InventorySteps {
 
     @And("User click add to cart button for {string}")
     public void userAddToCartItemFor(String item) {
-        inventoryPage.ClickAddToCartItem(item);
-        inventoryPage.ClickAddToCartItem(item);
+        inventoryPage.clickAddToCartItem(item);
+        inventoryPage.clickAddToCartItem(item);
     }
 
     @And("User click on shopping cart badge")
     public void userClickOnShoppingCartBadge() {
-        inventoryPage.ClickShoppingCartBadge();
+        inventoryPage.clickShoppingCartBadge();
     }
 
     @Then("User already on CartPage")

@@ -7,13 +7,15 @@
     When User input "standard_user" as userName and "secret_sauce" as password and click login
     Then User already on dashboard page
     When User sort item by "Price (high to low)"
-    When User click add to cart button for "Sauce Labs Bike Light"
+    And  User click add to cart button for "Sauce Labs Bike Light"
     And  User click add to cart button for "Sauce Labs Onesie"
     And  User click on shopping cart badge
-    When User click checkout button
-    And  User remove item "Sauce Labs Onesie" from shopping chart
+    Then User redirect to Your Cart page
+    When User remove item "Sauce Labs Onesie" from shopping chart
+    And  User click checkout button
+    Then User redirect to Your Information page
     When User fill first name as "Ryan", last name as "Pratama", and postal code as "51152"
     And  User Click Continue
-    Then User redirect to Checkout Overview and see total payment
-    When  User Click Finish
+    Then User see "Payment Information" as page overview
+    When User Click Finish
     Then User redirect to Checkout complete page
