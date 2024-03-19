@@ -30,10 +30,10 @@ public class CheckoutSteps {
     }
 
     @Then("User fill first name as {string}, last name as {string}, and postal code as {string}")
-    public void userFillFirstNameAsLastNameAsAndPostalCodeAs(String awal, String akhir, String kode) {
-    checkoutPage.fillFirstName(awal);
-    checkoutPage.fillLastName(akhir);
-    checkoutPage.fillPostalCode(kode);
+    public void userFillFirstNameAsLastNameAsAndPostalCodeAs(String first, String last, String postalCode) {
+    checkoutPage.fillFirstName(first);
+    checkoutPage.fillLastName(last);
+    checkoutPage.fillPostalCode(postalCode);
     }
 
     @And("User Click Continue")

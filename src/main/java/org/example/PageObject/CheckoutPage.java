@@ -54,14 +54,14 @@ private WebElement yourInformationPage;
  public void clickCheckoutButton(){
      checkoutButton.click();
  }
- public void fillFirstName(String awal){
-     fieldFirstName.sendKeys(awal);
+ public void fillFirstName(String first){
+     fieldFirstName.sendKeys(first);
  }
- public void fillLastName(String akhir){
-     fieldLastName.sendKeys(akhir);
+ public void fillLastName(String last){
+     fieldLastName.sendKeys(last);
  }
- public void fillPostalCode(String  kode){
-     fieldPostalCode.sendKeys(kode);
+ public void fillPostalCode(String  postalCode){
+     fieldPostalCode.sendKeys(postalCode);
  }
 
  public  void ClickContinueButton(){
