@@ -36,7 +36,7 @@ public class CheckoutSteps {
     checkoutPage.fillPostalCode(postalCode);
     }
 
-    @And("User Click Continue")
+    @And("User click continue")
     public void userClickContinue() {
         checkoutPage.ClickContinueButton();
     }
@@ -47,23 +47,23 @@ public class CheckoutSteps {
         Assert.assertEquals(text, checkoutPage.getPageOverview());
     }
 
-    @When("User Click Finish")
+    @When("User click Finish")
     public void userClickFinish() {
         checkoutPage.ClickButtonFinish();
 
     }
 
-    @Then("User redirect to Checkout complete page")
+    @Then("User redirect to checkout complete page")
     public void userRedirectToCheckoutCompletePage() {
         checkoutPage.CheckoutcompletePage();
     }
 
-    @Then("User redirect to Your Cart page")
+    @Then("User redirect to your cart page")
     public void userRedirectToYourCartPage() {
         checkoutPage.verifyYourCartPage();
     }
 
-    @Then("User redirect to Your Information page")
+    @Then("User redirect to your information page")
     public void userRedirectToYourInformationPage() {
         checkoutPage.verifyYourInformationPage();
     }

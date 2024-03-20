@@ -10,12 +10,12 @@
     And  User click add to cart button for "Sauce Labs Bike Light"
     And  User click add to cart button for "Sauce Labs Onesie"
     And  User click on shopping cart badge
-    Then User redirect to Your Cart page
+    Then User redirect to your cart page
     When User remove item "Sauce Labs Onesie" from shopping chart
     And  User click checkout button
-    Then User redirect to Your Information page
+    Then User redirect to your information page
     When User fill first name as "Ryan", last name as "Pratama", and postal code as "51152"
-    And  User Click Continue
+    And  User click continue
     Then User see "Payment Information" as page overview
-    When User Click Finish
-    Then User redirect to Checkout complete page
+    When User click Finish
+    Then User redirect to checkout complete page

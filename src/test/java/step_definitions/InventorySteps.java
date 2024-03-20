@@ -33,7 +33,7 @@ public class InventorySteps {
         inventoryPage.clickShoppingCartBadge();
     }
 
-    @Then("User already on CartPage")
+    @Then("User already on cart page")
     public void userOnCartPage() {Assert.assertTrue(inventoryPage.verifyCartPage());
     }
 
